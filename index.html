@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>背單字卡片</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>英文單字卡</h1>
+    <p>點擊卡片翻面，新增單字可在下方管理介面操作。</p>
+  </header>
+
+  <main>
+    <section class="card-section">
+      <div class="card" id="word-card">
+        <div class="card-face card-front" id="card-front">
+          <div class="card-content">
+            <span class="label">英文</span>
+            <h2 id="word-title">loading...</h2>
+          </div>
+        </div>
+        <div class="card-face card-back" id="card-back">
+          <div class="card-content">
+            <span class="label">中文 / 詞性 / 例句</span>
+            <p><strong>中文：</strong><span id="word-meaning"></span></p>
+            <p><strong>詞性：</strong><span id="word-type"></span></p>
+            <p><strong>例句：</strong><span id="word-example"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev-button">上一張</button>
+        <span id="card-index">1 / 10</span>
+        <button id="next-button">下一張</button>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>新增單字</h2>
+      <form id="add-word-form">
+        <label>
+          英文單字
+          <input type="text" id="input-word" required />
+        </label>
+
+        <label>
+          中文解釋
+          <input type="text" id="input-meaning" required />
+        </label>
+
+        <label>
+          詞性
+          <input type="text" id="input-type" placeholder="例如：n., v., adj." required />
+        </label>
+
+        <label>
+          例句
+          <textarea id="input-example" rows="3" required></textarea>
+        </label>
+
+        <button type="submit">新增單字</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
